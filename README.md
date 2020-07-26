@@ -20,7 +20,7 @@ $ ./bin/build
 1. Change the python runtime version your project needs in [Dockerfile](/Dockerfile#L2-L3).
    e.g if you need to build for python version 3.8 search & replace all occurances of 3.7 to `3.8` in the [Dockerfile](/Dockerfile#L2-L3)
 2. Add/update instruction for downloading the NLTK data you need.
-   e.g If you need NLTK `brown` corpus instead of `stopwords` you can change [this](//Dockerfile#L16) line to `RUN python -W ignore -m nltk.downloader brown -d /build/nltk_data`
+   e.g If you need NLTK `brown` corpus instead of `stopwords` you can change [this](/Dockerfile#L16) line to `RUN python -W ignore -m nltk.downloader brown -d /build/nltk_data`
 
 ### Deploy
 
@@ -37,7 +37,7 @@ You can create a layer in your AWS account in one of two ways,
 
 1. Configure lambda to use the lambda layer you published above.
 2. Due to the [manual setup](https://www.nltk.org/data.html#manual-installation) of NLTK Data, you need to set `NLTK_DATA=/opt/nltk_data` environment variable for your lambda function.
-<img width="800" alt="Screen Shot 2020-07-26 at 7 57 33 AM" src="https://user-images.githubusercontent.com/3880793/88478683-4e6aac80-cf18-11ea-9133-223348260d85.png">
+   <img width="800" alt="Screen Shot 2020-07-26 at 7 57 33 AM" src="https://user-images.githubusercontent.com/3880793/88478683-4e6aac80-cf18-11ea-9133-223348260d85.png">
 
 ## Contributing
 
