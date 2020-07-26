@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+IMAGE_NAME=python-nltk-layer
+
+docker run \
+  --interactive \
+  --tty \
+  --rm \
+  --volume "${PWD}:/var/task" \
+  $IMAGE_NAME \
+  bash

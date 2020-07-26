@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -e
+
+./bin/build
+
+export LAYER_NAME="python-nltk-layer-v1"
+export AWS_REGION=${AWS_REGION:=us-east-1}
+
+aws lambda publish-layer-version \
+  --region $AWS_REGION \
+  --layer-name $LAYER_NAME \
+  --description "Python NLTK layer for lambda v1" \
+  --zip-file "fileb://share/python-nltk-layer.zip"

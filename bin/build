@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set -e
+
+export IMAGE_NAME=python-nltk-layer
+
+rm -rf ./share
+mkdir ./share
+
+docker build \
+  --no-cache \
+  --tag $IMAGE_NAME \
+  .
+
+docker run \
+  --rm \
+  --volume "${PWD}/share:/share" \
+  "${IMAGE_NAME}:latest" \
+  sh -c "cp -r /build/share/* /share"
