@@ -27,13 +27,17 @@ $ ./bin/build
 You can create a layer in your AWS account in one of two ways,
 
 1. You can upload the zip file directly in AWS Console, e.g screenshot on how to do that below,
+   <img width="550" alt="Screen Shot 2020-07-26 at 7 49 51 AM" src="https://user-images.githubusercontent.com/3880793/88478685-4f034300-cf18-11ea-8768-737b47b03332.png">
+
    Or
+
 2. Assuming you have your AWS CLI setup,more info [here](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html). You can run `./bin/deploy` to publish the lambda layer.
 
 #### Lambda Instructions
 
 1. Configure lambda to use the lambda layer you published above.
 2. Due to the [manual setup](https://www.nltk.org/data.html#manual-installation) of NLTK Data, you need to set `NLTK_DATA=/opt/nltk_data` environment variable for your lambda function.
+<img width="800" alt="Screen Shot 2020-07-26 at 7 57 33 AM" src="https://user-images.githubusercontent.com/3880793/88478683-4e6aac80-cf18-11ea-9133-223348260d85.png">
 
 ## Contributing
 
