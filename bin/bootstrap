@@ -12,3 +12,4 @@ else
 fi
 
 docker pull lambci/lambda:build-python3.7
+echo "✅ Pulled latest lambci/lambda python image."
