@@ -1,6 +1,6 @@
 
-FROM lambci/lambda:build-python3.7
-ARG version=3.7
+FROM lambci/lambda:build-python3.8
+ARG version=3.8
 WORKDIR /build
 
 RUN mkdir -p python/lib/python$version/site-packages/

@@ -11,5 +11,5 @@ else
   exit 127
 fi
 
-docker pull lambci/lambda:build-python3.7
+docker pull lambci/lambda:build-python3.8
 echo "✅ Pulled latest lambci/lambda python image."
